@@ -1,0 +1,114 @@
+/* table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+} */
+@font-face {
+    font-family: Lovely coffee;
+    src: url(font/Lovely-Coffee.ttf) format("truetype");
+}
+@font-face {
+    font-family: CuppaJoe;
+    src: url(font/CuppaJoe.ttf) format("truetype");
+}
+body{
+    background-image: url(img/coffeeBG.jpg);
+}
+header {
+    margin-top: 0px;
+    padding-top: 0px;
+    text-align: center;
+    height: 60px;
+    font-family: Lovely coffee;
+    font-size: 32px;
+    background-color: rgb(145, 70, 35);
+    color: rgb(179, 148, 92);
+    text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
+}
+.c{
+    /* color: #83610c; */
+    color: rgb(179, 148, 92);
+    text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
+}
+main {
+    width: 49%;
+    min-height: 50vh;
+    float: right;
+    background-color: blanchedalmond;
+    margin: auto;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    text-align: left;
+    font-weight: bold;
+}
+#search-roast-selection {
+    width: 95%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    border: 1px solid;
+}
+#add-roast-selection {
+    width: 95%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    border: 1px solid;
+}
+form input {
+    width: 95%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    border: 1px solid ;
+}
+#search-submit {
+    background-color: steelblue;
+    color: wheat;
+    border: 1px solid black;
+    margin-top: auto;
+}
+#add-submit {
+    background-color: steelblue;
+    color: wheat;
+    border: 1px solid black;
+    margin-top: auto;
+    width: 95%;
+    border-radius: 5px;
+}
+main h2{
+    text-align: center;
+}
+.table {
+    float: left;
+    /* display: grid; */
+    width: 49%;
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    /* position: absolute;
+    top: 100px; */
+    border: 2px solid black;
+}
+.template {
+    padding-top: 5px;
+    text-align: center;
+}
+.header {
+    display: inline-block;
+    width: 42%;
+    padding-left: 3%;
+    padding-right: 3%;
+    color: blueviolet;
+    border: 1px solid black;
+    margin: auto;
+}
+#coffeeName {
+    font-family:'Times New Roman', Times, serif
+}
+#coffeeRoast{
+    font-family: CuppaJoe
+}
+.hide{
+    display: none;
+}

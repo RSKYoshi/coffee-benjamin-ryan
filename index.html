@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Coffee, Roast">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Feind</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/js.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><span class="c">C-</span>offee!</h1>
+    </header>
+    <hr>
+    <main>
+        <form>
+            <label for="search-roast-selection">Roast</label>
+            <br>
+            <select id="search-roast-selection">
+                <option value="all">all</option>
+                <option value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="dark">dark</option>
+            </select>
+            <br>
+            <label for="search-coffee-name">Coffee Name</label>
+            <br>
+            <input type="search" name="search-coffee-name" id="search-coffee-name" placeholder="Search for Coffee" data-search>
+            <br>
+            <input id="search-submit" type="submit"/>
+        </form>
+        <h2>Add a Coffee</h2>
+        <hr>
+        <form action="">
+            <label for="add-roast-selection">Roast</label>
+            <br>
+            <select id="add-roast-selection" required>
+                <option value="">Select Roast</option>
+                <option value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="dark">dark</option>
+            </select>
+            <br>
+            <label for="add-coffee-name">Coffee Name</label>
+            <br>
+            <input type="search" name="add-coffee-name" required id="add-coffee-name" placeholder="Add a Coffee Name">
+            <br>
+            <button id="add-submit">Add Coffee</button>
+        </form>
+    </main>
+        <div class="coffee" data-coffee-container></div>
+        <template data-coffee-template>
+            <div class="table" id="table">
+                <div class="header" id="coffeeName" data-coffee-name></div>
+                <div class="header" id="coffeeRoast" data-coffee-roast></div>
+            </div>
+        </template>  
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ROAST</th>
+            </tr>
+        </thead>
+        <tbody id="coffees"></tbody>
+    </table> -->
+</body>
+</html>
