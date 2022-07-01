@@ -62,3 +62,35 @@ console.log(coffeesList);
             console.warn(`added to coffee list storage`);
         });
     //}
+let coffees = []
+
+
+//confirm do you want to add selection to the list... then alert after if canceled
+function addOrNot (){
+    if ( confirm("do you want to add selection to the list")) {
+        alert('coffee will be added');
+        localStorage.setItem("coffeeList", JSON.stringify(addedCoffees));
+    } else {
+        alert('No coffee added to list');
+        localStorage.clear();
+    }
+}
+
+
+
+let addedCoffees = [];
+
+let addCoffeeSubmit = document.getElementById("add-submit");
+addCoffeeSubmit.addEventListener("click", function(event){
+    event.preventDefault();
+    let addCoffee = {
+        id: Date.now(),
+        addedRoast: document.getElementById("add-roast-selection").value,
+        coffeeName: document.getElementById("add-coffee-name").value
+    }
+    addedCoffees.push(addCoffee);
+    addOrNot();
+    document.forms[1].reset();
+    console.warn(`added to coffee list storage`);
+
+});
