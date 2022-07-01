@@ -17,12 +17,9 @@ td, th {
     font-family: CuppaJoe;
     src: url(font/CuppaJoe.ttf) format("truetype");
 }
-*{
-    cursor: url(img/Latte.cur),auto;
-}
-
 body{
-    background-image: url(img/coffeeBG.jpg);
+    background-image: url(img/coffeeBG.png);
+    background-color: #83610c;
 }
 header {
     margin-top: 0px;
@@ -35,6 +32,13 @@ header {
     color: rgb(179, 148, 92);
     text-shadow: 0 5px wheat, 0 0 6px cadetblue;
     /* , 0 0 1px white, 0 0 1px white, 0 0 1px white */
+}
+.logo{
+    height: 75px;
+    background-color: wheat;
+    margin-left: 30px;
+    float: left;
+    border-radius: 15px;
 }
 .c{
     color: #83610c;
@@ -56,6 +60,9 @@ main {
     font-weight: bold;
     border-radius: 1rem;
     border: 5px solid cadetblue;
+}
+*{
+    cursor: url();
 }
 #search-coffee-roast {
     width: 95%;
