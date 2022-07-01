@@ -55,16 +55,6 @@ console.log(coffeesList);
         //     console.log(coffee);
         //     return {name: coffee.name, roast: coffee.roast, element: card};
         // })
-   // function addCoffeeToList() {
-        let addCoffeeSubmit = document.getElementById("add-submit");
-        addCoffeeSubmit.addEventListener("click", function(event){
-            event.preventDefault();
-            console.warn(`added to coffee list storage`);
-        });
-    //}
-let coffees = []
-
-
 //confirm do you want to add selection to the list... then alert after if canceled
 function addOrNot (){
     if ( confirm("do you want to add selection to the list")) {
@@ -75,11 +65,7 @@ function addOrNot (){
         localStorage.clear();
     }
 }
-
-
-
 let addedCoffees = [];
-
 let addCoffeeSubmit = document.getElementById("add-submit");
 addCoffeeSubmit.addEventListener("click", function(event){
     event.preventDefault();
@@ -92,5 +78,4 @@ addCoffeeSubmit.addEventListener("click", function(event){
     addOrNot();
     document.forms[1].reset();
     console.warn(`added to coffee list storage`);
-
 });
