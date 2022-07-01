@@ -2,10 +2,9 @@
 const coffeeTemplate = document.querySelector("[data-coffee-template]");
 const coffeeContainer = document.querySelector("[data-coffee-contaier]");
 const searchInput = document.querySelector("[data-search]");
-const prevent =  (ev)=>{
-prevent.preventDefault();
-} 
-document.getElementById("search-coffee-name").addEventListener('click', prevent);
+document.getElementById("search-submit").addEventListener("click", function(event){
+    event.preventDefault()
+  });
 var coffees = [];
 // function coffeeRun() {
     // coffees.sort();
