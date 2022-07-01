@@ -17,6 +17,10 @@ td, th {
     font-family: CuppaJoe;
     src: url(font/CuppaJoe.ttf) format("truetype");
 }
+*{
+    cursor: url(img/Latte.cur),auto;
+}
+
 body{
     background-image: url(img/coffeeBG.jpg);
 }

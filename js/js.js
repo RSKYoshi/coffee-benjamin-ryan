@@ -79,3 +79,4 @@ addCoffeeSubmit.addEventListener("click", function(event){
     document.forms[1].reset();
     console.warn(`added to coffee list storage`);
 });
+
