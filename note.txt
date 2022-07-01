@@ -1,0 +1,21 @@
+function renderCoffee(coffee) {
+     let html = '<div class="coffee">';
+     html += '<h2>' + coffee.name + '</h2>';
+     html += '<p>' + coffee.roast + '</p>';
+     html += '<button>Select</button>'
+     html += '</div>';
+     return html;
+ }
+function renderCoffees(coffees) {
+     let html = '';
+     for(let i = 0; i <= coffees.length - 1; i++) {
+         html += renderCoffee(coffees[i]);
+     }
+     return html;
+ }
+ coffees.forEach(function(coffee) {
+    if (coffee.roast === searchCoffeeRoast) {
+        filteredCoffees.push(coffee);
+    }
+});
+coffeeContainer.innerHTML = renderCoffees(filteredCoffees);

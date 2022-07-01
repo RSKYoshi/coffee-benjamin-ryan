@@ -1,44 +1,35 @@
 "use strict";
-const coffeeTemplate = document.querySelector("[data-coffee-template]");
-const coffeeContainer = document.querySelector("[data-coffee-contaier]");
-const searchInput = document.querySelector("[data-search]");
-var coffees = [];
-
-// function coffeeRun() {
-    // coffees.sort();
-    // }
-
-//     Add functionality to search through the coffees by name,
-//   and display only the coffees that match the provided search term
-//   and to update the displayed coffee as the user types into the search box
-//   (You will need to add an input field to the existing form for this)
-    searchInput.addEventListener("input", (e) => {
+const coffeeTemplate = document.querySelector("[data-coffee-template]"); // hidden html template to auto-fill with js
+const coffeeContainer = document.querySelector("[data-coffee-contaier]"); // empty div that shows the serched coffees
+const searchInput = document.querySelector("[data-search]"); // serach data coffee input bar
+const searchButton = document.getElementById("search-submit") // search coffee submit button
+const searchCoffeeRoast = document.getElementById("search-coffee-roast").value; // roast selection for coffee search
+const searchCoffeeName = document.getElementById("search-coffee-name").value; // name search for coffee search
+let searchCoffees = []; // empty array to push coffees into
+            // coffees.map(coffee => {
+        //     const card = coffeeTemplate.content.cloneNode(true).children[0];
+        //     const cName = card.querySelector('[data-coffee-name]');
+        //     const cRoast = card.querySelector('[data-coffee-roast]');
+        //     cName.textContent = coffee.name;
+        //     cRoast.textContent = coffee.roast;
+        //     console.log(coffee);
+        //     return {name: coffee.name, roast: coffee.roast, element: card};
+        // })
+searchInput.addEventListener("input", (e) => {
         const value = e.target.value;
         console.log(value.toLowerCase());
-        // -    Make your name search case insensitive
+        console.log(searchCoffeeRoast.value);
         return value.toLowerCase();
-        });
-        coffees.map(coffee => {
-            const card = coffeeTemplate.content.cloneNode(true).children[0];
-            const cName = card.querySelector('[data-coffee-name]');
-            const cRoast = card.querySelector('[data-coffee-roast]');
-            cName.textContent = coffee.name;
-            cRoast.textContent = coffee.roast;
-            // console.log(coffee);
-            return {name: coffee.name, roast: coffee.roast, element: card};
-            // coffeeContainer.append(card)
-        })
-//    Allow the user to add new coffees to the page
-document.getElementById("search-submit").addEventListener("click", function(event){
-    event.preventDefault();
-    var coffee = {
-        name: document.getElementById("search-coffee-name").value, 
-        roast: document.getElementById("search-coffee-roast").value
-    }
-    
-  });
-  
-    function addToSearch() {
-        //     make new coffees into cookies
-        return;
+    });
+searchButton.addEventListener("click", function(event){
+        event.preventDefault();
+        let searchCoffee = {
+            name: searchCoffeeName, 
+            roast: searchCoffeeRoast
+        }
+        searchCoffees.push(searchCoffee);  
+        console.log(`serached for ${searchCoffees}`);
+    });
+function addCoffeeToList() {
+
     }

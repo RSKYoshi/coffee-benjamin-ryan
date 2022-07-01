@@ -1,4 +1,5 @@
-/* table {
+/* 
+table {
     border-collapse: collapse;
     margin: 15px 0;
 }
@@ -6,7 +7,8 @@
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
-} */
+} 
+*/
 @font-face {
     font-family: Lovely coffee;
     src: url(font/Lovely-Coffee.ttf) format("truetype");
