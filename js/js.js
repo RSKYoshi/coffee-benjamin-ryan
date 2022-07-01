@@ -2,10 +2,15 @@
 const coffeeTemplate = document.querySelector("[data-coffee-template]");
 const coffeeContainer = document.querySelector("[data-coffee-contaier]");
 const searchInput = document.querySelector("[data-search]");
-document.getElementById("search-submit").addEventListener("click", function(event){
-    event.preventDefault()
-  });
 var coffees = [];
+document.getElementById("search-submit").addEventListener("click", function(event){
+    event.preventDefault();
+    var coffee = {
+        name: document.getElementById("search-coffee-name"), 
+        roast: document.getElementById("search-coffee-roast")
+    }
+  
+  });
 // function coffeeRun() {
     // coffees.sort();
     // }
