@@ -24,9 +24,9 @@ let coffees = `[
     {"id": 14, "name": "French", "roast": "dark"}
 ]`;
 let coffeesList = JSON.parse(coffees);
-coffeesList.forEach(coffeetype => {
-    coffeeContainer.innerHTML = `${coffetype["names"]} , ${coffeetype["roast"]}`;    
-});
+//coffeesList.forEach(coffeetype => {
+//    coffeeContainer.innerHTML = `${coffetype["names"]} , ${coffeetype["roast"]}`;    
+//});
 //coffeeContainer.innerHTML = `<h1>${coffeesList[0].name} </h1> `//<p>${coffeesList.roast} </p>`;
 console.log(coffeesList);
     searchInput.addEventListener("input", (e) => {

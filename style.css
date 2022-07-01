@@ -25,16 +25,19 @@ header {
     padding-top: 0px;
     text-align: center;
     height: 60px;
-    font-family: Lovely coffee;
+    font-family: CuppaJoe;
     font-size: 32px;
     background-color: rgb(145, 70, 35);
     color: rgb(179, 148, 92);
-    text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
+    text-shadow: 0 5px wheat, 0 0 6px cadetblue;
+    /* , 0 0 1px white, 0 0 1px white, 0 0 1px white */
 }
 .c{
-    /* color: #83610c; */
-    color: rgb(179, 148, 92);
-    text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
+    color: #83610c;
+    /* color: rgb(179, 148, 92);
+    text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white; */
+    font-family: Lovely coffee;
+    font-size: 48px;
 }
 main {
     width: 49%;
@@ -47,6 +50,8 @@ main {
     align-items: center;
     text-align: left;
     font-weight: bold;
+    border-radius: 1rem;
+    border: 5px solid cadetblue;
 }
 #search-coffee-roast {
     width: 95%;
