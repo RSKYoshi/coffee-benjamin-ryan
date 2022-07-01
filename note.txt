@@ -19,3 +19,25 @@ function renderCoffees(coffees) {
     }
 });
 coffeeContainer.innerHTML = renderCoffees(filteredCoffees);
+
+below for: main.js lines 64-80
+===================================
+
+//prevent default
+//add to local storage
+=========================
+
+document.getElementById("add-submit").addEventListener("click", function(event){
+    event.preventDefault();
+
+    var addCoffeeName = roastSelection.value;
+        var addedCoffees = [];
+        {
+                addedCoffees.push(coffee);
+
+        });
+    localStorage.setItem("add-coffee-name",  )
+
+}, false);
+
+// send in
