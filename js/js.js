@@ -3,14 +3,7 @@ const coffeeTemplate = document.querySelector("[data-coffee-template]");
 const coffeeContainer = document.querySelector("[data-coffee-contaier]");
 const searchInput = document.querySelector("[data-search]");
 var coffees = [];
-document.getElementById("search-submit").addEventListener("click", function(event){
-    event.preventDefault();
-    var coffee = {
-        name: document.getElementById("search-coffee-name").value, 
-        roast: document.getElementById("search-coffee-roast").value
-    }
-  
-  });
+
 // function coffeeRun() {
     // coffees.sort();
     // }
@@ -36,6 +29,15 @@ document.getElementById("search-submit").addEventListener("click", function(even
             // coffeeContainer.append(card)
         })
 //    Allow the user to add new coffees to the page
+document.getElementById("search-submit").addEventListener("click", function(event){
+    event.preventDefault();
+    var coffee = {
+        name: document.getElementById("search-coffee-name").value, 
+        roast: document.getElementById("search-coffee-roast").value
+    }
+    
+  });
+  
     function addToSearch() {
         //     make new coffees into cookies
         return;
