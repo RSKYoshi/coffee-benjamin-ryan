@@ -35,7 +35,7 @@
         </form>
         <h2  class="c">Add a Coffee</h2>
         <hr>
-        <form action="">
+        <form action="" id="add-form">
             <label for="add-roast-selection">Roast</label>
             <br>
             <select name="add-roast-selection" id="add-roast-selection" required>
@@ -52,13 +52,7 @@
             <button id="add-submit">Add Coffee</button>
         </form>
     </main>
-        <div id="coffeeContainer"></div>
-        <template data-coffee-template>
-            <div class="table" id="table">
-                <div class="header" id="coffeeName" data-coffee-name></div>
-                <div class="header" id="coffeeRoast" data-coffee-roast></div>
-            </div>
-        </template>  
+        <div id="coffeeContainer"></div> 
     <!-- <table>
         <thead>
             <tr>

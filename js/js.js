@@ -1,12 +1,10 @@
 "use strict";
-const coffeeTemplate = document.querySelector("[data-coffee-template]"); // hidden html template to auto-fill with js
 let coffeeContainer = document.querySelector("#coffeeContainer"); // empty div that shows the serched coffees
 const searchInput = document.querySelector("[data-search]"); // serach data coffee input bar
 const searchButton = document.getElementById("search-submit") // search coffee submit button
 const searchCoffeeRoast = document.getElementById("search-coffee-roast"); // roast selection for coffee search
 const searchCoffeeName = document.getElementById("search-coffee-name"); // name search for coffee search
 let searchCoffees = []; // empty array to push coffees into
-
 let coffees = `[
     {"id": 1, "name": "Light City", "roast": "light"},
     {"id": 2, "name": "Half City", "roast": "light"},
@@ -24,59 +22,62 @@ let coffees = `[
     {"id": 14, "name": "French", "roast": "dark"}
 ]`;
 let coffeesList = JSON.parse(coffees);
-//coffeesList.forEach(coffeetype => {
-//    coffeeContainer.innerHTML = `${coffetype["names"]} , ${coffeetype["roast"]}`;    
-//});
-//coffeeContainer.innerHTML = `<h1>${coffeesList[0].name} </h1> `//<p>${coffeesList.roast} </p>`;
-console.log(coffeesList);
-    searchInput.addEventListener("input", (e) => {
-        const value = e.target.value;
-        console.log(value.toLowerCase());
-        console.log(searchCoffeeRoast.value);
-        return value.toLowerCase();
+function renderCoffeeList() {
+    let disp = coffeesList.slice();
+    let roastValue = searchCoffeeRoast.value;
+    let filterValue = searchCoffeeName.value;
+    if (roastValue !== "all") {
+        disp = disp.filter(function(coffee) {
+            return coffee.roast == roastValue;
+        });}
+    if (filterValue) {
+        disp = disp.filter(function(coffee) {
+            return coffee.name.toLowerCase().includes(filterValue.toLowerCase());
+         });}
+    disp = disp.map(function(coffee) {
+        return `<h1><em>${coffee.name}</em> - ${coffee.roast}</h1>`;
     });
-    searchButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        let searchCoffee = {
-            // id: Date.now(),
-            name: searchCoffeeName.value, 
-            roast: searchCoffeeRoast.value
-        }
-        searchCoffees.push(searchCoffee);  
-        console.log(`serached for ${searchCoffees[0].name} with ${searchCoffee.roast}`);
-        console.log(searchCoffees);
-    });
-                // coffees.map(coffee => {
-        //     const card = coffeeTemplate.content.cloneNode(true).children[0];
-        //     const cName = card.querySelector('[data-coffee-name]');
-        //     const cRoast = card.querySelector('[data-coffee-roast]');
-        //     cName.textContent = coffee.name;
-        //     cRoast.textContent = coffee.roast;
-        //     console.log(coffee);
-        //     return {name: coffee.name, roast: coffee.roast, element: card};
-        // })
+    coffeeContainer.innerHTML = disp.join("\n");
+}
+renderCoffeeList();
+searchCoffeeRoast.addEventListener("input", (e) => {
+    renderCoffeeList();
+})
+searchInput.addEventListener("input", (e) => {
+    renderCoffeeList();
+});
+searchButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    let searchCoffee = {
+        name: searchCoffeeName.value, 
+        roast: searchCoffeeRoast.value
+    }
+    searchCoffees.push(searchCoffee);  
+    console.log(`serached for ${searchCoffees[0].name} with ${searchCoffee.roast}`);
+    console.log(searchCoffees);
+});
 //confirm do you want to add selection to the list... then alert after if canceled
 function addOrNot (){
     if ( confirm("do you want to add selection to the list")) {
         alert('coffee will be added');
-        localStorage.setItem("coffeeList", JSON.stringify(addedCoffees));
+        localStorage.setItem("coffeeList", JSON.stringify(coffeesList));
     } else {
         alert('No coffee added to list');
         localStorage.clear();
     }
 }
-let addedCoffees = [];
 let addCoffeeSubmit = document.getElementById("add-submit");
-addCoffeeSubmit.addEventListener("click", function(event){
+document.getElementById("add-form").addEventListener("submit", function(event) {
+    console.log("submited");
     event.preventDefault();
-    let addCoffee = {
+        let coffee = {
         id: Date.now(),
-        addedRoast: document.getElementById("add-roast-selection").value,
-        coffeeName: document.getElementById("add-coffee-name").value
+        roast: document.getElementById("add-roast-selection").value,
+        name: document.getElementById("add-coffee-name").value
     }
-    addedCoffees.push(addCoffee);
+    coffeesList.push(coffee);
     addOrNot();
     document.forms[1].reset();
     console.warn(`added to coffee list storage`);
+    renderCoffeeList();
 });
-
