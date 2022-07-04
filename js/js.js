@@ -1,6 +1,6 @@
 "use strict";
-let coffeeContainer = document.querySelector("#coffeeContainer"); // empty div that shows the serched coffees
-const searchInput = document.querySelector("[data-search]"); // serach data coffee input bar
+let coffeeContainer = document.querySelector("#coffeeContainer"); // empty div that shows the searched coffees
+const searchInput = document.querySelector("[data-search]"); // search data coffee input bar
 const searchButton = document.getElementById("search-submit") // search coffee submit button
 const searchCoffeeRoast = document.getElementById("search-coffee-roast"); // roast selection for coffee search
 const searchCoffeeName = document.getElementById("search-coffee-name"); // name search for coffee search
