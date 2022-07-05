@@ -63,8 +63,9 @@ main {
     box-shadow: -10px 10px 10px black;
 }
 *{
-    cursor: url();
+    cursor: url("img/Latte.cur"), pointer;
 }
+
 #search-coffee-roast {
     width: 95%;
     margin-bottom: 2%;
