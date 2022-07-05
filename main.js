@@ -49,10 +49,34 @@
 //     tbody.innerHTML = renderCoffees(coffees);
 //     submitButton.addEventListener('click', updateCoffees);
 
-function removeItem(){
 
+const showList = document.getElementById("removeBtn");
+showList.addEventListener("click", showLocalStorage);
+
+function showLocalStorage(){
+    console.log("click");
+    for(let i=0; i<localStorage.length;i++){
+        console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
+        }
+    }
+// modal here
+let modal = document.getElementById("modal");
+let btn = document.getElementById("removeBtn");
+let span = document.getElementsByClassName("close")[0];
+btn.onclick=function()  {
+    modal.style.display="block";
 }
-
-document.getElementById("removeBtn").addEventListener("click", ) {
-
+span.onclick = function() {
+    modal.style.display="none";
 }
+window.onclick = function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+var li = document.getElementById("list");
+li.innerHTML = `${coffeesList[1].name}  ${coffeesList[1].roast}`;
+
+
+
+

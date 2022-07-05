@@ -69,7 +69,7 @@ function addOrNot (){
 }
 let addCoffeeSubmit = document.getElementById("add-submit");
 document.getElementById("add-form").addEventListener("submit", function(event) {
-    console.log("submited");
+    console.log("submitted");
     event.preventDefault();
         let coffee = {
         id: Date.now(),
