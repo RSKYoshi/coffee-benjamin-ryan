@@ -53,8 +53,9 @@ searchButton.addEventListener("click", function (event) {
         roast: searchCoffeeRoast.value
     }
     searchCoffees.push(searchCoffee);  
-    console.log(`serached for ${searchCoffees[0].name} with ${searchCoffee.roast}`);
+    console.log(`searched for ${searchCoffees[0].name} with ${searchCoffee.roast}`);
     console.log(searchCoffees);
+    // this.style.backgroundColor = 'blue';
 });
 //confirm do you want to add selection to the list... then alert after if canceled
 function addOrNot (){
@@ -62,8 +63,8 @@ function addOrNot (){
         alert('coffee will be added');
         localStorage.setItem("coffeeList", JSON.stringify(coffeesList));
     } else {
-        alert('No coffee added to list');
-        localStorage.clear();
+        alert("Remember, more coffee is better...");
+        // localStorage.clear();
     }
 }
 let addCoffeeSubmit = document.getElementById("add-submit");
@@ -81,3 +82,4 @@ document.getElementById("add-form").addEventListener("submit", function(event) {
     console.warn(`added to coffee list storage`);
     renderCoffeeList();
 });
+

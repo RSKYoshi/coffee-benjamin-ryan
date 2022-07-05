@@ -20,6 +20,7 @@ td, th {
 body{
     background-image: url(img/coffeeBG.png);
     background-color: #83610c;
+    background-size: 100px;
 }
 header {
     margin-top: 0px;
@@ -62,9 +63,19 @@ main {
     border: 5px solid cadetblue;
     box-shadow: -10px 10px 10px black;
 }
+
 *{
     cursor: url("img/Latte.cur"), pointer;
 }
+
+*::selection {
+    background-color: blanchedalmond;
+    color: green;
+
+}
+
+
+
 
 #search-coffee-roast {
     width: 95%;

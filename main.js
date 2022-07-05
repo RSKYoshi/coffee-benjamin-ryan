@@ -49,3 +49,10 @@
 //     tbody.innerHTML = renderCoffees(coffees);
 //     submitButton.addEventListener('click', updateCoffees);
 
+function removeItem(){
+
+}
+
+document.getElementById("removeBtn").addEventListener("click", ) {
+
+}
