@@ -65,6 +65,7 @@ let btn = document.getElementById("removeBtn");
 let span = document.getElementsByClassName("close")[0];
 btn.onclick=function()  {
     modal.style.display="block";
+    rU();
 }
 span.onclick = function() {
     modal.style.display="none";
@@ -74,14 +75,18 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
 function rC(){
-    alert("More coffee is a good thing, therefore no deletions at this  time.")
+    alert("More coffee is a good thing, therefore no deletions at this time.")
 }
 let list2=[]
-for(i=0; i<coffeesList.length;  i++){
+list2 += `<form>`
+function rU() {
     let li = document.getElementById("list");
+for(let i = 0; i  < coffeesList.length + 1;  i++){
     li.innerHTML = list2
-    list2 +=`${coffeesList[i].name} ${coffeesList[i].roast}  <br>`;
+    list2 +=`<input  type='checkbox' id="cb" class="check"><h3>${coffeesList[i].name} ${coffeesList[i].roast}</h3></input>`;
+}
 }
 
 

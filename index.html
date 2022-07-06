@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="img/logo.png" alt="logo">
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
         <h1><span id="removeBtn">&sext;</span> Coffee Fiend <span id="editBtn">&sext;</span></h1>
     </header>
     <hr>
@@ -21,15 +21,14 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p id="list"></p>
-            <button class=remC onclick="rC()">remove coffee?</button>
-
+            <div id="list"></div>
+            <button class="remC" onclick="rC()">remove coffee?</button>
         </div>
     </div>
     <div id=editModal class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p id="editList"></p>
+            <div id="editList"></div>
             <button class = "remC" onclick="alr()">Edit coffee?</button>
         </div>
     </div>

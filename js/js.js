@@ -93,26 +93,41 @@ document.getElementById("add-form").addEventListener("submit", function(event) {
 
 function alr(params) {
     alert('Too much work to edit form now, check in again some other time');
+    run();
 }
     const showList1 = document.getElementById("editBtn");
     let modal1 = document.getElementById("editModal");
     let span1 = document.getElementsByClassName("close")[1];
     let lis = document.getElementById("editList");
     let list = [];
-    showList1.addEventListener("click", (e) =>{
-        console.log("click");
-        modal1.style.display="block";
-        for(let i=0; i<coffeesList.length;i++){
-            // console.log(`${localStorage.key(i)} =[${localStorage.getItem(localStorage.key(i))}`); 
-            coffeesList.sort();
-            lis.innerHTML = list
-            list += `${coffeesList[i].name}  ${coffeesList[i].roast} <br>`;
+    let  li;
+    showList1.addEventListener("click", run)
+
+        function run() {
+            console.log("click");
+            modal1.style.display = "block";
+            if (list.length <= (list.length * 2 -1)){
+                console.log(" no add");
+            }
+            else {
+            for (let i = 0; i < coffeesList.length; i++) {
+                // console.log(`${localStorage.key(i)} =[${localStorage.getItem(localStorage.key(i))}`);
+                coffeesList.sort();
+                li = `<div  class="coffBox"><h3 class='left'>${coffeesList[i].name}</h3><h4 class='clear'>${coffeesList[i].roast}</h4></div>`;
+                list.push(li);
+            }
+            list.forEach(function (item) {
+                lis.innerHTML  +=  item;
+            });}
         }
-        });
     // modal here
-    span1.onclick = () => { modal1.style.display="none";}
-    window.onclick = (event) => {
-        if (event.target === modal) {
+    span1.onclick = () => {
+        modal1.style.display="none";
+    }
+    window.onclick = function (e)  {
+        if (e.target === modal1) {
             modal1.style.display = "none";
         }
     }
+
+

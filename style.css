@@ -21,6 +21,7 @@ body{
     background-image: url(img/coffeeBG.png);
     background-color: #83610c;
     background-size: 100px;
+    overflow: hidden;
 }
 header {
     margin-top: 0px;
@@ -149,6 +150,9 @@ main h2{
 #coffeeContainer {
     background: #eceee56e 10%;
     text-align: center;
+    overflow: scroll;
+    height: 70vh;
+    border-radius: 30px;
 }
 .modal {
     display: none; /* Hidden by default */
@@ -165,12 +169,26 @@ main h2{
 }
 .modal-content {
     background-color: #fefefe;
+    background-image: url(img/coffeeTable.jpg);
+    /*background-size: 17rem 10rem;*/
+    background-size: cover;
     margin: auto;
+    top: 5vh;
+    left: 10vw;
+    right: 10vw;
+    /*margin-top: 0;*/
+    /*margin-bottom: 5vh;*/
+    position:absolute;
+    overflow: scroll;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 80vw;
+    max-height: 85vh;
+    min-height: 85vh;
     border-radius: 1rem;
     box-shadow: -10px 10px 10px black;
+    text-align: right;
+
 }
 
 .remC {
@@ -179,8 +197,49 @@ main h2{
     width: 20%;
     border-radius: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #baa48a;
 }
 .remC:hover {
     transform: translate(0, -2px);
     box-shadow: 10px 10px 25px 0 black;
+}
+.left{
+    display: inline-block;
+    width: 49%;
+    background-color: black;
+    color: blue;
+    margin: auto;
+    margin-right: 15px;
+}
+.clear{
+    display: inline-block;
+    width: 49%;
+    background-color: grey;
+    color: red;
+}
+.coffBox{
+    display: block;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.close {
+    font-size: 3em;
+    color: white;
+    border: #83610c solid 7px;
+    border-radius: 75%;
+}
+
+.close:hover {
+    color: green;
+
+}
+
+#list {
+    text-align: center;
+}
+
+.check  {
+    background-image: url("img/coffeeBG2.jpg");
 }
