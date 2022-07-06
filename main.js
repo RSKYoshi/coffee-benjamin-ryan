@@ -53,8 +53,8 @@
 const showList = document.getElementById("removeBtn");
 showList.addEventListener("click", showLocalStorage);
 
+//shows local storage upon  clicking  sextant
 function showLocalStorage(){
-    console.log("click");
     for(let i=0; i<localStorage.length;i++){
         console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
         }
@@ -74,8 +74,15 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
-var li = document.getElementById("list");
-li.innerHTML = `${coffeesList[1].name}  ${coffeesList[1].roast}`;
+function rC(){
+    alert("More coffee is a good thing, therefore no deletions at this  time.")
+}
+let list2=[]
+for(i=0; i<coffeesList.length;  i++){
+    let li = document.getElementById("list");
+    li.innerHTML = list2
+    list2 +=`${coffeesList[i].name} ${coffeesList[i].roast}  <br>`;
+}
 
 
 

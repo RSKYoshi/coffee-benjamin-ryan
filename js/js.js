@@ -116,4 +116,3 @@ function alr(params) {
             modal1.style.display = "none";
         }
     }
-  

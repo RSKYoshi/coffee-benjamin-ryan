@@ -169,4 +169,18 @@ main h2{
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    border-radius: 1rem;
+    box-shadow: -10px 10px 10px black;
+}
+
+.remC {
+    border: 1px solid grey;
+    margin-top: auto;
+    width: 20%;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.remC:hover {
+    transform: translate(0, -2px);
+    box-shadow: 10px 10px 25px 0 black;
 }
