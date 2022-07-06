@@ -153,6 +153,8 @@ main h2{
     overflow: scroll;
     height: 70vh;
     border-radius: 30px;
+    box-shadow: 5px 5px 12px 0 black;
+
 }
 .modal {
     display: none; /* Hidden by default */
@@ -223,23 +225,44 @@ main h2{
     margin: auto;
     text-align: center;
 }
-
 .close {
     font-size: 3em;
     color: white;
     border: #83610c solid 7px;
     border-radius: 75%;
 }
-
 .close:hover {
     color: green;
-
 }
-
 #list {
     text-align: center;
 }
-
 .check  {
     background-image: url("img/coffeeBG2.jpg");
+}
+
+#playBeats {
+    height: 25px;
+    width: 25rem;
+}
+#navList a{
+    text-decoration: none;
+    color: black;
+}
+#navList li{
+    list-style: none;
+    float: left;
+    font-size: 32px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5%;
+    border: white 1px solid;
+    box-shadow: 10px 10px 25px 0 black;
+}
+.img {
+    height: 30px;
+}
+hr{
+    clear: left;
 }

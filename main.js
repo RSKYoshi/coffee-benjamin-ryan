@@ -89,6 +89,9 @@ for(let i = 0; i  < coffeesList.length + 1;  i++){
 }
 }
 
+coffeesList.splice()
+
+
 
 
 

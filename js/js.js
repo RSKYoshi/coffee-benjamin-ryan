@@ -48,6 +48,7 @@ searchInput.addEventListener("input", (e) => {
 });
 searchButton.addEventListener("click", function (event) {
     event.preventDefault();
+    lofiPlay();
     let searchCoffee = {
         name: searchCoffeeName.value, 
         roast: searchCoffeeRoast.value
@@ -129,5 +130,18 @@ function alr(params) {
             modal1.style.display = "none";
         }
     }
-
+    function lofiPlay() {
+        let lofi = document.getElementById("lofi");
+        // lofi.muted = false;
+        // let count = 1;
+        // let myInt = setInterval(function update()  {
+        //     if (count === 0){
+                lofi.play();
+        //     }
+        //     else if (count >  0){
+        //         console.log(count);
+        //     }
+        //     count--;
+        // },1000);
+    }
 
