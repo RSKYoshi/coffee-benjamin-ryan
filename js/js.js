@@ -62,7 +62,7 @@ searchButton.addEventListener("click", function (event) {
 function addOrNot (){
     if ( confirm("do you want to add selection to the list")) {
         alert('coffee will be added');
-        localStorage.setItem("coffeeList", JSON.stringify(coffeesList));
+        localStorage.setItem("coffeesList", JSON.stringify(coffeesList));
     } else {
         alert("Remember, more coffee is better...");
         // localStorage.clear();
