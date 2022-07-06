@@ -83,3 +83,37 @@ document.getElementById("add-form").addEventListener("submit", function(event) {
     renderCoffeeList();
 });
 
+
+
+
+
+
+
+
+
+function alr(params) {
+    alert('Too much work to edit form now, check in again some other time');
+}
+    const showList1 = document.getElementById("editBtn");
+    let modal1 = document.getElementById("editModal");
+    let span1 = document.getElementsByClassName("close")[1];
+    let lis = document.getElementById("editList");
+    let list = [];
+    showList1.addEventListener("click", (e) =>{
+        console.log("click");
+        modal1.style.display="block";
+        for(let i=0; i<coffeesList.length;i++){
+            // console.log(`${localStorage.key(i)} =[${localStorage.getItem(localStorage.key(i))}`); 
+            coffeesList.sort();
+            lis.innerHTML = list
+            list += `${coffeesList[i].name}  ${coffeesList[i].roast} <br>`;
+        }
+        });
+    // modal here
+    span1.onclick = () => { modal1.style.display="none";}
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal1.style.display = "none";
+        }
+    }
+  
